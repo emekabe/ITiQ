@@ -2,6 +2,7 @@ package com.itiqng.itiq;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -83,6 +84,10 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
-        return super.onKeyDown(keyCode, event);
+        startActivity(new Intent(this, ExitActivity.class));
+        finish();
+        return true;
+
+//        return super.onKeyDown(keyCode, event);
     }
 }
