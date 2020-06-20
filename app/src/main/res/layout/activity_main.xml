@@ -34,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_refresh_48px"
+        tools:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,11 +61,12 @@
         android:text="Loading "
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/colorAccent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_optimizationLevel="chains"
         app:layout_constraintBottom_toTopOf="@+id/progress_circular"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintEnd_toStartOf="@+id/load_percentage_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/load_percentage_text"
@@ -74,11 +76,13 @@
         android:text="@string/sample_percentage_progress"
         android:textColor="@color/colorAccent"
         android:textSize="36sp"
+        android:chainUseRtl="false"
         app:layout_constraintBottom_toTopOf="@+id/progress_circular"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/loading_text"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_optimizationLevel="chains" />
 
 
     <TextView
@@ -86,15 +90,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed-light"
-        android:textAlignment="center"
         android:text="@string/something_went_wrong"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/progress_circular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:visibility="gone" />
 
 
     <WebView
