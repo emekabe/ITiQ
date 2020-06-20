@@ -76,7 +76,6 @@
         android:text="@string/sample_percentage_progress"
         android:textColor="@color/colorAccent"
         android:textSize="36sp"
-        android:chainUseRtl="false"
         app:layout_constraintBottom_toTopOf="@+id/progress_circular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
